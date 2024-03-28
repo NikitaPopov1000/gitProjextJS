@@ -9,6 +9,8 @@ export const useStore = defineStore('store', () => {
         try {
             const response = await Github.getProjects(searchText);
             foundStore.value = response.items;
+           return foundStore.value
+
         } catch (error) {
             console.log(error);
         }

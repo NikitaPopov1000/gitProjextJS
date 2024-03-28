@@ -66,3 +66,78 @@ a {
     font-family: "Roboto Regular", serif;
     font-weight: 400;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.searchButtonIcon {
+    width: 51px;
+    height: 41px;
+    margin: 14px;
+
+
+}
+
+.form-control {
+    width: 1376px;
+    height: 68px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DDDDDD;
+    padding-bottom: 47px;
+    padding-top: 32px;
+    width: 100%;
+
+}
+
+.searchButton:hover {
+    background: antiquewhite;
+}
+
+.searchButton:active {
+    background: blue;
+}
+
+.container {
+    margin: 0 25px;
+}
+
+::placeholder {
+    font-family: "Roboto Regular", serif;
+    padding-left: 3%;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.main {
+    margin-top: 34px;
+    margin-left: 39px;
+    margin-right: 39px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 28px;
+
+}
+
+.searchText {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 100px;
+}
+
+
+@media(max-width: 766px) {
+    // pfйди в браузер
+}
+
+
+html, body { max-width: 100%; overflow-x: hidden; }
