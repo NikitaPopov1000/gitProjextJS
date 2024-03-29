@@ -8,22 +8,20 @@ const foundStore = ref([]);
 const isSearching = ref(false);
 const getProjects = () => {
 
-  foundStore.value  = store.getAndFoundProjects(searchText.value)
+  foundStore.value = store.getAndFoundProjects(searchText.value)
   console.log(foundStore.value)
-
 
 
 };
 import Button from "@/components/BaseComponents/Button/Button.vue";
 import {ref} from "vue";
-import Card from "@/components/BaseComponents/Cards/Card.vue";
+import Input from "@/components/Input.vue";
 </script>
 
 <template>
   <div class="header">
-    <div class="container">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Введите название проекта" v-model="searchText">
+        <Input class="form-control" type="text" :placeholderText v-model="searchText"/>
         <Button class="searchButton" :disabled="isSearching" @click="getProjects">
           <template #buttonContent>
             <img v-if="!isSearching" src="../../public/Rectangle%2017.png" class="searchButtonIcon" alt="search">
@@ -32,9 +30,11 @@ import Card from "@/components/BaseComponents/Cards/Card.vue";
       </div>
 
     </div>
-  </div>
 </template>
 
 <style scoped>
-
+.header {
+  display: inline-flex;
+  width: 100%;
+}
 </style>
